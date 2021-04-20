@@ -1,12 +1,29 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Chatroom</title>
 </head>
-<body>
+<body class="bodyke">
 
-<script
+    <label for="input">Username:</label>
+    <input id="username" class="username" type="text">
+    <button type="button" class="btnn">Enter</button>
+
+    <label for="input">Your message:</label>
+    <input id="input" type="text">
+    <button type="button" id="all" class="all">Send message to everyone</button>
+    <button type="button" id="me" class="me">Send message to me</button>
+
+    <div id="target" class="messages"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
